@@ -60,7 +60,7 @@ module.exports={
          * resolve the one with the extension listed first in the array and skip the rest. 
          * This is what enables users to leave off the extension when importing
          */
-        extensions: ['.js','.jsx','.json'] 
+        extensions: ['.js','.jsx','.json']
     },
     module:{
         /** "rules"
@@ -74,7 +74,23 @@ module.exports={
                 test: /\.(js|jsx)$/,    //kind of file extension this rule should look for and apply in test
                 exclude: /node_modules/, //folder to be excluded
                 use:  'babel-loader' //loader which we are going to use
-            }
+            },
+            {
+              test: /\.(sass|css|scss)$/,
+              use: [
+                'style-loader',
+                'css-loader',
+                {
+                  loader: "postcss-loader",
+                  options: {
+                    // plugins: () => [
+                    //   require("autoprefixer")()
+                    // ],
+                  },
+                },
+                'sass-loader',
+              ]
+            },
         ]
     },
     optimization: {
