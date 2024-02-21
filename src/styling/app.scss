@@ -1,9 +1,27 @@
+@import url("./card/card.scss");
+@import url("./button/button.scss");
+
 body #root .app-container {
   width: 100%;
   height: 100%;
+  background-color: #E3E6E6;
 }
 
 .app-container {
-  background-color: #E3E6E6;
   position: absolute;
+}
+
+.flex-row-justify-between{
+  display: flex; 
+  justify-content: space-between;
+}
+
+.flex-row-align-center{
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-justify-around{
+  display: flex;
+  justify-content: space-around;
 }

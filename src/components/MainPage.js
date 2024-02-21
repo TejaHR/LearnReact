@@ -2,6 +2,8 @@ import React from "react";
 import NavBarComponent from "./NavBar";
 import CardComponent from "../Utils/Card";
 import user from "../assets/icons/user.svg";
+import ProfileCardComp from "../Utils/ProfileCard";
+import friend from "../assets/images/friend.png"
 
 const MainPage = () => {
   const buttonParams = {
@@ -14,12 +16,15 @@ const MainPage = () => {
   };
 
   const cardParams = {
-    title: "Hello There!",
-    text: "Welcome",
+    cardTitle: "Hello There!",
+    cardText: "Welcome",
     cardColor: "yellow",
     width: "25rem",
   };
 
+  const profileParams = {
+    "image": friend
+  }
   return (
     <div className="main-container d-flex flex-column align-items-center w-100">
       <NavBarComponent />
@@ -27,6 +32,7 @@ const MainPage = () => {
         cardParams={cardParams}
         buttonParams={buttonParams}
       />
+      <ProfileCardComp profileParams={profileParams} cardParams={cardParams}/>
     </div>
   );
 };

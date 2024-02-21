@@ -2,6 +2,7 @@ import React from "react";
 import ButtonComponent  from "./Button";
 import Card from "react-bootstrap/Card";
 import wallaper from "../assets/images/wallapaper.jpg";
+import _ from "lodash"
 
 const CardComponent = ({
   cardParams={},
@@ -10,11 +11,11 @@ const CardComponent = ({
   return (
     <div className="card-container mt-2">
       <Card style={{ width: cardParams?.width, color: cardParams?.cardColor }}>
-        <Card.Img variant="top" src={wallaper} />
-        <Card.Body className="d-flex justify-content-center">
+        <Card.Img variant="top" src={cardParams?.image} />
+        <Card.Body>
           <Card.Title>{cardParams?.cardTitle}</Card.Title>
           <Card.Text>{cardParams?.cardText}</Card.Text>
-          <ButtonComponent buttonParams={buttonParams}/>
+          {!_.isEmpty(buttonParams) && <ButtonComponent buttonParams={buttonParams}/>}
         </Card.Body>
       </Card>
     </div>
