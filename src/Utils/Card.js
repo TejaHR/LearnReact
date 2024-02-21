@@ -1,12 +1,11 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import ButtonComponent  from "./Button";
 import Card from "react-bootstrap/Card";
 import wallaper from "../assets/images/wallapaper.jpg";
 
 const CardComponent = ({
   cardParams={},
-  buttonStyling = {},
-  iconParams = {}
+  buttonParams = {},
 }) => {
   return (
     <div className="card-container mt-2">
@@ -15,15 +14,7 @@ const CardComponent = ({
         <Card.Body className="d-flex justify-content-center">
           <Card.Title>{cardParams?.cardTitle}</Card.Title>
           <Card.Text>{cardParams?.cardText}</Card.Text>
-          {iconParams ? (
-            <Button style={{ color: buttonStyling?.color }}>
-              {buttonStyling?.buttonName}
-            </Button>
-          ) : (
-            <Button style={{ color: buttonStyling?.color }}>
-              {buttonStyling?.buttonName}
-            </Button>
-          )}
+          <ButtonComponent buttonParams={buttonParams}/>
         </Card.Body>
       </Card>
     </div>
