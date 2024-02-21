@@ -29,7 +29,8 @@ module.exports = {
      * the name of the output file
      */
     filename: "main.js",
-    publicPath: "/"
+    publicPath: "/",
+    assetModuleFilename: 'assets/[name][ext]'
   },
   /** "target"
    * setting "node" as target app (server side), and setting it as "web" is
@@ -95,6 +96,17 @@ module.exports = {
             },
           },
           "sass-loader",
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
         ],
       },
     ],
