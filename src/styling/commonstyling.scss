@@ -1,0 +1,30 @@
+@mixin flex-row-justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-row-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+@mixin flex-row-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row-justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin normal-text{
+    font-size: 1.4rem !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+@mixin normal-title{
+    font-size: 1.6rem !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}

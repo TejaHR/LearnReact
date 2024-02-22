@@ -1,27 +1,49 @@
 @import url("./card/card.scss");
 @import url("./button/button.scss");
-
-body #root .app-container {
+$xs: 320px;
+$sm: 425px;
+$med: 768px;
+$lg: 1024px;
+$xlg: 1440px;
+body,
+#root,
+.app-container {
   width: 100%;
   height: 100%;
-  background-color: #E3E6E6;
+  background-color: #E3E6E6 !important;
+}
+
+html {
+  @media screen and (min-width: $xs) and (max-width: $med) {
+    font-size: 8px;
+  }
+
+  @media screen and (min-width: $med) {
+    font-size: 10px;
+  }
 }
 
 .app-container {
   position: absolute;
 }
 
-.flex-row-justify-between{
-  display: flex; 
+.flex-row-justify-between {
+  display: flex;
   justify-content: space-between;
 }
 
-.flex-row-align-center{
+.flex-row-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+.flex-row-align-center {
   display: flex;
   align-items: center;
 }
 
-.flex-row-justify-around{
+.flex-row-justify-around {
   display: flex;
   justify-content: space-around;
 }
