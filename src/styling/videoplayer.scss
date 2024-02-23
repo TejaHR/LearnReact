@@ -1,0 +1,19 @@
+$xs: 320px;
+$sm: 425px;
+$med: 768px;
+$lg: 1024px;
+$xlg: 1440px;
+
+.videoplayer-container{
+    @media screen and (min-width: $xs) and (max-width: $med) {
+        width: 100%;
+      }
+    
+      @media screen and (min-width: $med) and (max-width: $lg) {
+        width: 80%;
+      }
+
+      @media screen and (min-width: $med) {
+        width: 70%;
+      }
+}

@@ -36,6 +36,7 @@ const MainPage = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
+    // need to call our API
     axios.get("https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=20")
       .then(response => {
         setPhotos(response.data.photos);
@@ -57,6 +58,12 @@ const MainPage = () => {
           profileParams={profileParams}
           cardParams={cardParams}
         />
+      </div>
+      <div>
+        <SliderComponent sliderParams={photos}/>
+      </div>
+      <div className="mt-4">
+        <VedioPlayerComp vedioParams={vedioParams}/>
       </div>
     </div>
   );

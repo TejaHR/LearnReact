@@ -1,11 +1,13 @@
 import React from "react";
-import ReactPlayer from 'react-player'
+import ReactPlayer from "react-player";
+// import "../styling/videoplayer.scss"
 
 const VedioPlayerComp = ({ vedioParams = {} }) => {
-
-    return (
-        <ReactPlayer url={vedioParams.url} />
-    );
+  return (
+    <div className="videoplayer-container">
+      <ReactPlayer url={vedioParams.url}/>
+    </div>
+  );
 };
 
 export default VedioPlayerComp;
