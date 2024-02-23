@@ -10,7 +10,7 @@ const CardComponent = ({
 }) => {
   return (
     <div className="card-container mt-2">
-      <Card style={{ width: cardParams?.width, color: cardParams?.cardColor }}>
+      <Card style={{ color: cardParams?.cardColor}}>
         <Card.Img variant="top" src={cardParams?.image} />
         <Card.Body>
           <Card.Title>{cardParams?.cardTitle}</Card.Title>

@@ -1,5 +1,6 @@
 import React from "react";
 import CardComponent from "./Card.js";
+import "../styling/card/card.scss"
 
 const ProfileCardComp = ({ profileParams = {}, cardParams={} }) => {
 //   const cardParams = {
@@ -10,9 +11,9 @@ const ProfileCardComp = ({ profileParams = {}, cardParams={} }) => {
 //     image: ""
 //   };
   return (
-    <div className="profilecard-container flex-row-justify-between">
-      <div>
-        <img className="rounded-circle" inline src={profileParams?.image} />
+    <div className="profilecard-container">
+      <div className="flex-row-justify-center">
+        <img className="rounded-circle profile-card-img" inline src={profileParams?.image} />
       </div>
       <div className="flex-row-align-center">
         <CardComponent cardParams={cardParams}/>

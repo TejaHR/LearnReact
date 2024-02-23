@@ -12,9 +12,9 @@ const MainPage = () => {
   const buttonParams = {
     buttonName: "Click Here",
     color: "blue",
-    iconParams: {
-      iconPosition: "right",
-      iconImg: user
+    iconParams:{
+      iconPosition : "right",
+      iconImg : user
     }
   };
 
@@ -48,15 +48,16 @@ const MainPage = () => {
   return (
     <div className="main-container d-flex flex-column align-items-center w-100">
       <NavBarComponent />
-      <CardComponent
+      {/* <CardComponent
         cardParams={cardParams}
         buttonParams={buttonParams}
-      />
-      <div style={{display:"flex"}}>
-        <ProfileCardComp profileParams={profileParams} cardParams={cardParams} />
-        <SliderComponent sliderParams={photos} />
+      /> */}
+      <div className="m-3">
+        <ProfileCardComp
+          profileParams={profileParams}
+          cardParams={cardParams}
+        />
       </div>
-      <VedioPlayerComp vedioParams={vedioParams}/>
     </div>
   );
 };

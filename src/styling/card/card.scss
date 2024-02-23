@@ -1,0 +1,66 @@
+@use "../commonstyling.scss"as *;
+$xs: 320px;
+$sm: 425px;
+$med: 768px;
+$lg: 1024px;
+$xlg: 1440px;
+
+
+.profilecard-container {
+    @media screen and (min-width: $med) {
+        display: flex !important;
+        width: 100%;
+    }
+}
+
+.profile-card-img {
+    @media screen and (min-width: $xs) and (max-width: $sm) {
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    @media screen and (min-width: $sm) and (max-width: $lg) {
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    @media screen and (min-width: $lg) {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.card-container {
+    @media screen and (min-width: $xs) and (max-width: $sm) {
+        width: 100px;
+        height: 50px;
+    }
+
+    @media screen and (min-width: $sm) and (max-width: $lg) {
+        width: 100px;
+        height: 50px;
+    }
+
+    @media screen and (min-width: $lg) {
+        height: 200px;
+        width: 200px;
+        @include flex-row-justify-between;
+        margin-left: 10px;
+    }
+}
+
+.card-container>.card {
+    @media screen and (min-width: $med) {
+        min-width: 350px !important;
+    }
+}
+
+.card-text{
+    @include normal-text;
+}
+
+.card-title{
+    @include normal-title
+}
