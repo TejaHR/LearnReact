@@ -4,16 +4,19 @@ $med: 768px;
 $lg: 1024px;
 $xlg: 1440px;
 
-.videoplayer-container{
-    @media screen and (min-width: $xs) and (max-width: $med) {
-        width: 100%;
+.react-player{
+    @media screen and (min-width: $xs) and (max-width: $sm) {
+        width: 318px !important;
+        height: 212px !important;
       }
     
-      @media screen and (min-width: $med) and (max-width: $lg) {
-        width: 80%;
+      @media screen and (min-width: $sm) and (max-width: $med) {
+        width: 423px !important;
+        height: 282 !important;
       }
 
       @media screen and (min-width: $med) {
-        width: 70%;
+        width: 90% !important;
+        height: 90% !important;
       }
 }
