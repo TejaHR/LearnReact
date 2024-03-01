@@ -4,16 +4,28 @@ $med: 768px;
 $lg: 1024px;
 $xlg: 1440px;
 
-.slider-container{
-    @media screen and (min-width: $xs) and (max-width: $med) {
-        width: 100%;
-      }
-    
-      @media screen and (min-width: $med) and (max-width: $lg) {
-        width: 80%;
-      }
+// .carousel-container {
+//   @media screen and (min-width: $xs) and (max-width: $med) {
+//     width: 100%;
+//   }
 
-      @media screen and (min-width: $med) {
-        width: 70%;
-      }
+//   @media screen and (min-width: $med) and (max-width: $lg) {
+//     width: 100%;
+//   }
+
+//   @media screen and (min-width: $med) {
+//     width: 100%;
+//   }
+// }
+
+.carousel-images{
+  max-width: 100% !important;
+}
+
+.active.carousel-item-start, .carousel-item-prev:not(.carousel-item-end){
+  transform: translateX(-50%) !important;
+}
+
+.active.carousel-item-end, .carousel-item-prev:not(.carousel-item-end){
+  transform: translateX(0%) !important;
 }

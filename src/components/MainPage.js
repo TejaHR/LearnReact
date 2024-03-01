@@ -7,8 +7,12 @@ import friend from "../assets/images/friend.png"
 import SliderComponent from "../Utils/Slider";
 import axios from 'axios';
 import VedioPlayerComp from "../Utils/Vedio";
+import PopUpCard from "../Utils/PopupCard";
+import closeIcon from "../assets/icons/icons8-close-30.png"
 
 const MainPage = () => {
+  const [modalShow, setModalShow] = useState(false);
+
   const buttonParams = {
     buttonName: "Click Here",
     color: "blue",
@@ -46,6 +50,11 @@ const MainPage = () => {
       });
   }, []);
 
+  const popUpCardParams = {
+    "titleOfPopUp": "Title Here",
+    "popUpBody": "This is the body getting sent from props"
+  }
+
   return (
     <div className="main-container d-flex flex-column align-items-center w-100">
       <NavBarComponent />
@@ -58,6 +67,15 @@ const MainPage = () => {
           profileParams={profileParams}
           cardParams={cardParams}
         />
+      </div>
+      <div>
+      <PopUpCard
+        show={modalShow}
+        popUpCardParams={popUpCardParams}
+        displayModal={(value) => setModalShow(value)}
+        closeIcon={closeIcon}
+      />
+
       </div>
       <div>
         <SliderComponent sliderParams={photos}/>

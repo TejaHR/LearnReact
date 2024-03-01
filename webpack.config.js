@@ -15,6 +15,7 @@ module.exports = {
    * the entry point
    */
   entry: "./index.js",
+  devtool: 'inline-source-map',
   plugins: [
     new MiniCssExtractPlugin({
       filename: "app.css",
